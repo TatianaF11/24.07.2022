@@ -1,4 +1,3 @@
-> Сестренка:
 //Задача 54: Задайте двумерный массив. Напишите программу, которая упорядочит по убыванию элементы каждой 
 //строки двумерного массива.
 //Например, задан массив:
@@ -72,9 +71,7 @@ int[,] SortedArray(int[,] arr)
     }
     return arr;
 }
-//Zadacha54();
 
-> Сестренка:
 //Задача 56: Задайте прямоугольный двумерный массив. Напишите программу,
 //которая будет находить строку с наименьшей суммой элементов.
 // Например, задан массив:
@@ -86,79 +83,77 @@ int[,] SortedArray(int[,] arr)
 //  суммой элементов: 1 строка
 //void Zadacha56()
 {
-    Random random = new Random();
-    int rows = random.Next(3, 5);
-    int columns = random.Next(5, 7);
-    int[,] array = new int[rows, columns];
-    CreateArray(array);
-    Console.WriteLine("Двумерный массив:");
-    PrintArray(array);
-    FillMinSum(array);
-    Console.WriteLine("Массив из сумм строк:");
-    PrintArrayOnes(FillMinSum(array));
-    Console.WriteLine();
-    Console.WriteLine("Минимальная сумма строки:");
-    int min = MinSum(FillMinSum(array));
-    Console.WriteLine(min);
+    Random random = new Random();
+    int rows = random.Next(3, 5);
+    int columns = random.Next(5, 7);
+    int[,] array = new int[rows, columns];
+    CreateArray(array);
+    Console.WriteLine("Двумерный массив:");
+    PrintArray(array);
+    FillMinSum(array);
+    Console.WriteLine("Массив из сумм строк:");
+    PrintArrayOnes(FillMinSum(array));
+    Console.WriteLine();
+    Console.WriteLine("Минимальная сумма строки:");
+    int min = MinSum(FillMinSum(array));
+    Console.WriteLine(min);
 }
 int[,] CreateArray(int[,] arr)
 {
-    Random random = new Random();
-    int rows = arr.GetLength(0);
-    int columns = arr.GetLength(1);
-    for (int i = 0; i < rows; i++)
-    {
-        for (int j = 0; j < columns; j++)
-        {
-            arr[i, j] = random.Next(1,10);
-        }
-    }
-    return arr;
+    Random random = new Random();
+    int rows = arr.GetLength(0);
+    int columns = arr.GetLength(1);
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < columns; j++)
+        {
+            arr[i, j] = random.Next(1,10);
+        }
+    }
+    return arr;
 }
 
 int[] PrintArrayOnes(int[] arr)
 {
-    for (int i = 0; i < arr.Length; i++)
-    {
-        Console.Write(arr[i] + "\t");
-    }
-    return arr;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        Console.Write(arr[i] + "\t");
+    }
+    return arr;
 }
 
 int[] FillMinSum(int[,] arr)
 {
-    int rows = arr.GetLength(0);
-    int columns = arr.GetLength(1);
-    int[] array = new int[rows];
-    int index = 0;
-    int sum = 0;
-    for (int i = 0; i < rows; i++)
-    {
-        sum = 0;
-        for (int j = 0; j < columns; j++)
-        {
-            sum += arr[i, j];
-        }
-        array[index] = sum;
-        index++;
-    }
-    return array;
+    int rows = arr.GetLength(0);
+    int columns = arr.GetLength(1);
+    int[] array = new int[rows];
+    int index = 0;
+    int sum = 0;
+    for (int i = 0; i < rows; i++)
+    {
+        sum = 0;
+        for (int j = 0; j < columns; j++)
+        {
+            sum += arr[i, j];
+        }
+        array[index] = sum;
+        index++;
+    }
+    return array;
 }
 
 int MinSum(int[] arr)
 {
-    int min = arr[0];
-    for (int i = 0; i < arr.Length; i++)
-    {
-        if (arr[i] < min)
-        {
-            min = arr[i];
-        }
-    }
-    return min;
+    int min = arr[0];
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i] < min)
+        {
+            min = arr[i];
+        }
+    }
+    return min;
 }
-//Zadacha56();
-void Zadacha58()
 {
 //Задача 58. Заполните спирально массив 4 на 4.
 // Например, на выходе получается вот такой массив:
@@ -234,4 +229,3 @@ int[,] FillArraySpiral(int[,] array)
     }
     return array;
 }
-Zadacha58();
